@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import HomePage from "./pages/homepage/homepage.component";
+import { HatsPageDetails } from "./components/hats-details/hats-detail.component";
 
 const HatsPage = () => {
   return (
@@ -18,6 +19,7 @@ class App extends React.Component {
         <Routes>
           <Route exact path="/" element={<HomePage></HomePage>} />
           <Route path="/hats" element={<HatsPage></HatsPage>} />
+          <Route path="/hats/:id" element={<HatsPageDetails/>}/>
         </Routes>
       </div>
     );
